@@ -310,8 +310,8 @@ class __MultiSelectDialogFieldViewState<V>
           decoration: widget.chipDisplay!.decoration,
           chipColor: widget.chipDisplay!.chipColor ??
               ((widget.selectedColor != null &&
-                      widget.selectedColor != Colors.transparent)
-                  ? widget.selectedColor!.withOpacity(0.35)
+                  widget.selectedColor != Colors.transparent)
+                  ? widget.selectedColor!.withOpacity(0.25)
                   : null),
           alignment: widget.chipDisplay!.alignment,
           textStyle: widget.chipDisplay!.textStyle,
@@ -329,8 +329,8 @@ class __MultiSelectDialogFieldViewState<V>
         items: chipDisplayItems,
         colorator: widget.colorator,
         chipColor: (widget.selectedColor != null &&
-                widget.selectedColor != Colors.transparent)
-            ? widget.selectedColor!.withOpacity(0.35)
+            widget.selectedColor != Colors.transparent)
+            ? widget.selectedColor!.withOpacity(0.30)
             : null,
       );
     }
@@ -399,7 +399,7 @@ class __MultiSelectDialogFieldViewState<V>
                                               Colors.transparent)
                                       ? widget.selectedColor!
                                       : Theme.of(context).primaryColor
-                                  : Colors.black45,
+                                  : Colors.black26,
                           width: _selectedItems.isNotEmpty
                               ? (widget.state != null && widget.state!.hasError)
                                   ? 1.4
@@ -409,7 +409,7 @@ class __MultiSelectDialogFieldViewState<V>
                       ),
                     )
                 : widget.decoration,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(3),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
